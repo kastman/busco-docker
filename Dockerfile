@@ -40,3 +40,7 @@ COPY config.ini $DEST/$BUSCO_VERSION/config
 
 ENTRYPOINT ["/software/applications/busco/3.0.0/scripts/run_BUSCO.py"]
 CMD ["-h"]
+
+# Optionally Install R and ggplot
+RUN yum install -y R
+RUN R -e "install.packages('ggplot2', clean=T, repos='http://cran.us.r-project.org')"
