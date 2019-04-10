@@ -9,6 +9,7 @@ ENV APP_PATH=/software/applications
 ENV DEST=$APP_PATH/$APP_NAME/
 ENV PATH=$DEST/$BUSCO_VERSION/scripts:$PATH
 ENV BLAST_VERSION=2.2.31
+ENV AUGUSTUS_CONFIG_PATH=/software/augustus/3.2.2/config
 
 RUN yum install -y \
   python \
